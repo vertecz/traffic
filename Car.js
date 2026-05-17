@@ -102,7 +102,7 @@ export class Car {
       this.currentAngle += angleDiff * 0.1 * simSpeed * dt * 60;
     }
 
-    // Перестроение рядов (заблаговременно за 400px до перекрестка)
+    // Перестроение рядов
     const distToCenter = dist(this, INTERSECTION_CENTER);
     if (
       !this.isTurning &&
@@ -152,7 +152,7 @@ export class Car {
       this.state = "stopping";
     }
 
-    // --- ЛОГИКА ПРИОРИТЕТА ---
+    //ЛОГИКА ПРИОРИТЕТА
     let yieldToOncoming = false;
     if (
       (this.turn === "left" || this.turn === "uturn") &&
